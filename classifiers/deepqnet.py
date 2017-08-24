@@ -223,8 +223,7 @@ class DeepQNet:
             if self.epsilon >= self.min_epsilon and len(observations) > self.min_observations:
                 self.epsilon -= self.epsilon_decay
             if self.verbose > 0:
-                print
-                'episode', episode, 'ended at step', step, ' epsilon', self.epsilon
+                print('episode', episode, 'ended at step', step, ' epsilon', self.epsilon)
 
     def train_batch(self, batch, verbose=False):
         """ Trains the model with a the given batch.
@@ -237,7 +236,8 @@ class DeepQNet:
             4 ... is terminal state
 
         Args:
-            batch: Training batch
+            :param batch: Training batch
+            :param verbose: If set to true there will be verbose output.
         """
 
         state = [d[0] for d in batch]
@@ -257,16 +257,11 @@ class DeepQNet:
                 q_value.append(reward[idx] + self.gamma * np.max(predicted[idx]))
 
             if verbose:
-                print
-                state[idx]
-                print
-                action[idx]
-                print
-                reward[idx]
-                print
-                predicted[idx]
-                print
-                q_value[idx]
+                print(state[idx])
+                print(action[idx])
+                print(reward[idx])
+                print(predicted[idx])
+                print(q_value[idx])
 
         lrate = self.learning_rate
         if type(self.learning_rate) is not float:
