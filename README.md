@@ -5,10 +5,11 @@ So help improve and please don't just copy paste for any assignments!
 
 ## General
 
-I created this two years ago and didn't run it since then and also rearranged the folder structure, and yea it's pretty sure broken to a certain point (please someone fix it! ;) ). 
-If you run it and fix some stuff I strongly encourage you to push your changes, so that other people like you can profit from it! Also general improvements are very welcome and feel free to add some enviroments and samples that would be really nice, for example for cartpole or mountain hill (get them to work - I didn't)!
+This repository contains a simple implementation of deepmind's deep q algorithm.
 
-I'll try to explain the most important stuff below as good as I can remember. Also feel free to help improve!
+Feel free du improve or add features.
+
+As of now only the simple grid world example works, but feel free to get the other examples running.
 
 ## Enviroments
 
